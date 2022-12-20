@@ -127,12 +127,7 @@
 
 
 
-.slider-image {
-    width: 900px;
-    margin-right: auto;
-    margin-left: auto;
-    display: block;
-}
+
 
 .slider-arrows-item {
     display: block;
@@ -211,6 +206,13 @@
     .header-navbar-mobile {
         display: none;
     }
+
+    .slider-image {
+        width: 900px;
+        margin-right: auto;
+        margin-left: auto;
+        display: block;
+    }
 }
 
 
@@ -218,6 +220,13 @@
 @media (min-width: 768px) and (max-width: 1023px) {
     .header-navbar-mobile {
         display: none;
+    }
+
+    .slider-image {
+        width: 600px;
+        margin-right: auto;
+        margin-left: auto;
+        display: block;
     }
 }
 
@@ -351,6 +360,13 @@
 
     .header-title {
         font-size: 110px;
+    }
+
+    .slider-image {
+        width: 100%;
+        margin-right: auto;
+        margin-left: auto;
+        display: block;
     }
 
 }
