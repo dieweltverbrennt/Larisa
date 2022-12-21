@@ -8,6 +8,26 @@
     color: inherit;
 }
 
+.rent-contact {
+    display: block;
+    background-color: rgb(255, 168, 35);
+    width: 300px;
+    height: 60px;
+    border-radius: 25px;
+    position: fixed;
+    bottom: 50px;
+    right: 40px;
+    font-family: 'Ristretto Pro', sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 35px;
+    border: none;
+    box-shadow: 1px 1px 10px;
+
+    cursor: pointer;
+    z-index: 1000;
+}
+
 .header-container {
     padding: 40px;
     box-sizing: border-box;
@@ -31,7 +51,7 @@
     max-width: 1000px;
     min-width: 600px;
 
-    font-size: 25px;
+    font-size: 30px;
     font-weight: normal;
     list-style-type: none;
     text-transform: uppercase;
@@ -46,20 +66,20 @@
 }
 
 .header-title {
-    font-size: 124px;
+    font-size: 150px;
     text-align: center;
     text-transform: uppercase;
 }
 
 .header-subtitle {
-    font-size: 28px;
+    font-size: 50px;
     margin-top: 30px;
     text-align: center;
     text-transform: uppercase;
 }
 
 .header-paragraph {
-    font-size: 22px;
+    font-size: 30px;
     text-align: center;
     margin-top: 80px;
 }
@@ -82,24 +102,31 @@
 
 @keyframes icon-down-open-big {
     0% {
-        top: 450px;
+        top: 70%;
     }
-
     50% {
-        top: 460px;
+        top: 80%;
     }
-
     100% {
-        top: 450px;
+        top: 70%;
     }
 }
 
 
 
 
+.rent-title{
+    font-family: 'Ristretto Pro', sans-serif;
+    font-size: 60px;
+    text-align: center;
+    text-transform: uppercase;
+
+    margin-bottom: 10px;
+}
+
 .rent-gallery {
     width: 100%;
-    margin-bottom: 20vh;
+    margin-bottom: 5vh;
     position: relative;
 }
 
@@ -193,15 +220,36 @@
     width: 80%;
     margin-right: auto;
     margin-left: auto;
+
+    font-family: 'TT Norms';
+    font-size: 20px;
+    text-align: center;
+
+    margin-bottom: 100px;
+}
+
+.rent-description-text {
+    margin-bottom: 35px;
 }
 
 .rent-description:before {
     content: "";
     display: block;
     width: 100%;
-    background-color: rgb(177, 177, 177);
+    background-color: rgba(234, 234, 234, 0.812);
     height: 2px;
     margin-bottom: 20px;
+}
+
+.rent-description-price {
+    text-align: right;
+    font-size: 19px;
+    font-weight: 300;
+}
+
+.price {
+    font-weight: 600;
+    font-size: 29px;
 }
 
 .about-container {
@@ -209,7 +257,7 @@
     margin-right: auto;
     margin-left: auto;
 
-    margin-bottom: 50px;
+    margin-bottom: 250px;
 }
 
 .about-logo-img {
@@ -220,7 +268,14 @@
 }
 
 .about-text {
+    font-family: 'TT Norms';
     text-align: center;
+    width: 40%;
+    font-size: 30px;
+    line-height: 1.5;
+    margin-right: auto;
+    margin-left: auto;
+    
 }
 
 .additional {
@@ -234,13 +289,14 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    padding-top: 250px;
-    padding-bottom: 250px;
+    padding-top: 200px;
+    padding-bottom: 200px;
     box-sizing: content-box;
 
 }
 
 .additional-title {
+    font-family: 'TT Norms';
     color: #fff;
     font-size: 100px;
     text-align: center;
@@ -249,9 +305,13 @@
 .additional-rent-title {
     margin-top: 40px;
 
+    font-family: 'TT Norms';
+    font-weight: 300;
     text-align: center;
-    font-size: 50px;
+    font-size: 25px;
     color: #fff;
+
+    margin-bottom: 100px;
 }
 
 h4 {
@@ -259,18 +319,184 @@ h4 {
 }
 
 .additional-rent-list {
+    font-family: 'TT Norms';
     color: #fff;
+    text-transform: uppercase;
+    list-style-type: none;
+    text-align: center;
+
+    width: 60%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.additional-rent-list-item {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: start;
+    cursor: pointer;
+    margin-bottom: 20px;
+    position: relative;
+    padding: 10px 2px;
+}
+
+.additional-rent-list-item:after {
+    content: "";
+    display: block;
+    background-color: #fff;
+    width: 102%;
+    height: 1px;
+    position: absolute;
+    top: auto;
+    bottom: -130px;
+    right: auto;
+    left: auto;
+
+    margin-bottom: 120px;
+}
+
+
+.additional-button-more {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+
+
+    position: relative
+}
+
+.additional-button-more:hover {
+    background-color: rgb(255, 168, 35);
+}
+
+.additional-button-more-active {
+    background-color: rgb(255, 168, 35);
+}
+
+.button-span {
+    margin-top: 13px;
+    display: block;
+    background-color: #fff;
+    border: none;
+    width: 25px;
+    height: 1px;
+    cursor: pointer;
+    position: absolute;
+    top: 20%;
+    right: 20%;
+}
+
+.button-span:after {
+    content: "";
+    display: block;
+    background-color: #fff;
+    border: none;
+    width: 25px;
+    height: 1px;
+    transform: rotate(90deg);
+}
+
+h4 {
+    font-size: 22px;
+}
+
+.additional-rent-list:before {
+    content: "";
+    display: block;
+    background-color: #fff;
+    width: 102%;
+    height: 1px;
+
+    margin-bottom: 10px;
+}
+
+.additional-rent-sublist-hidden {
+    display: none;
+}
+
+.button-span-close {
+    transform: rotate(45deg);
+}
+
+.additional-rent-sublist {
+   text-align: left;
+}
+
+.additional-rent-sublist-item {
+    font-size: 15px;
+}
+
+.additional-rent-sublist-item:nth-child(n+2) {
+    margin-top: 10px;
+}
+
+
+.social {
+    background-color: #fff;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.social-title {
+    font-family: 'TT Norms';
+    text-align: center;
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.social-text {
+    margin-top: 50px;
+    font-family: 'TT Norms';
+    text-align: center;
+    font-size: 20px;
+}
+
+.social-link-vk {
+    margin-top: 50px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    width: 50px;
 }
 
 
 
 footer {
     background-color: #000;
-    padding-top: 60px;
-    padding-bottom: 50px;
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.g-map {
+    width: 50vw;
+    height: 620px;
+}
+
+.adress-container {
+    margin-left: 3%;
+    color: #fff;
+    margin-top: auto;
+    margin-bottom: auto;
 
 }
 
+.adress {
+    font-family: 'TT Norms';
+    font-size: 30px;
+}
+
+.contact {
+    font-family: 'TT Norms';
+    font-size: 25px;
+}
 
 
 
@@ -293,6 +519,11 @@ footer {
         margin-right: auto;
         margin-left: auto;
     }
+
+    h4 {
+        width: 70%;
+        text-align: left;
+    }
 }
 
 
@@ -304,7 +535,7 @@ footer {
 
     .slider-image {
         width: 100%;
-        margin-top: 10vh;
+        margin-top: 5vh;
         margin-right: auto;
         margin-left: auto;
         display: block;
@@ -313,6 +544,10 @@ footer {
     .rent {
         width: 100%;
     }
+
+    .g-map {
+        width: 100vw;
+    }
 }
 
 
@@ -320,6 +555,24 @@ footer {
 @media (max-width: 767px) {
     .hidden {
         display: none;
+    }
+
+    .rent-title {
+        margin-top: 10px;
+        font-size: 40px;
+    }
+
+    .rent-description-text {
+        font-size: 18px;
+    }
+
+    .rent-description-price {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .price {
+        font-size: 20px;
     }
 
     .header-container {
@@ -448,7 +701,7 @@ footer {
     }
 
     .slider-image {
-        margin-top: 10vh;
+        margin-top: 2vh;
         width: 100%;
         margin-right: auto;
         margin-left: auto;
@@ -474,6 +727,82 @@ footer {
         padding-top: 5px;
     }
 
-    
+    .rent-description {
+        margin-bottom: 20px;
+    }
 
+    .about-container {
+        width: 95%;
+        margin-bottom: 80px;
+    }
+
+    .about-text{
+        width: 99%;
+        font-size: 25px
+    }
+
+    .additional-title {
+        font-size: 45px;
+    }
+
+    .additional-rent-list {
+        width: 95%;
+    }
+
+    .additional-button-more {
+        margin-top: 0;
+        width: 25px;
+        height: 25px;
+    }
+
+    .button-span {
+        width: 15px;
+        top: 0;
+        right: 20%;
+    }
+
+    h4 {
+        margin-bottom: 20px;
+    }
+
+    .button-span:after {
+        width: 15px;
+    }
+
+
+    .about-logo-img {
+        width: 300px;
+    }
+
+    .social-title {
+        font-size: 30px;
+    }
+
+    .social-text {
+        width: 80%;
+        text-align: center;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .g-map {
+        width: 100vw;
+    }
+
+    .adress {
+        margin-bottom: 10px;
+        font-size: 25px;
+    }
+
+    .contact {
+        font-size: 20px;
+    }
+
+    .contact:last-child {
+        margin-bottom: 10px;
+    }
+
+    .rent-contact {
+        display: none;
+    }
 }

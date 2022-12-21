@@ -61,3 +61,23 @@ for(let i = 0; i < sliderDots.length; i++) {
         setSlide(i);
     }
 }
+
+// Equipment list manager
+const additonalButtons = Array.from(document.querySelectorAll(".additional-button-more"));
+// const buttonSpan = Array.from(document.querySelectorAll(".button-span"))
+
+additonalButtons.forEach(element => {
+    element.addEventListener("click", () => {
+        if(element.classList.contains("additional-button-more-active")) {
+            element.classList.remove("additional-button-more-active");
+            element.querySelector(".button-span").classList.remove("button-span-close");
+            element.nextElementSibling.classList.add("additional-rent-sublist-hidden");
+        }
+        else {
+            element.classList.add("additional-button-more-active");
+            element.querySelector(".button-span").classList.add("button-span-close");
+            element.nextElementSibling.classList.remove("additional-rent-sublist-hidden");
+        }
+    })
+})
+
